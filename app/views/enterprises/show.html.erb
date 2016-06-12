@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom enterprise:</strong>
+  <%= @enterprise.nom_enterprise %>
+</p>
+
+<p>
+  <strong>Nom intranet:</strong>
+  <%= @enterprise.nom_intranet %>
+</p>
+
+<p>
+  <strong>Rif:</strong>
+  <%= @enterprise.rif %>
+</p>
+
+<p>
+  <strong>Vision:</strong>
+  <%= @enterprise.vision %>
+</p>
+
+<p>
+  <strong>Mision:</strong>
+  <%= @enterprise.mision %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @enterprise.direccion %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @enterprise.telefono %>
+</p>
+
+<p>
+  <strong>Slogan:</strong>
+  <%= @enterprise.slogan %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @enterprise.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_enterprise_path(@enterprise) %> |
+<%= link_to 'Back', enterprises_path %>

@@ -1,0 +1,17 @@
+                        <%=form_tag sessions_create_enterprise_path do %>
+                            <div class="form-group">
+                                <%= label_tag 'username' %>
+                                <%= text_field_tag 'username',nil, placeholder: 'username o email', class: 'form-control' %>
+                            </div>
+                            <div class="form-group">
+                                <%= label_tag 'clave', 'Password' %>
+                                <%= password_field_tag 'clave',nil, placeholder: 'password', class: 'form-control' %>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                <%= check_box_tag 'Recordarme' %>Recordarme
+                                </label>
+                            </div>
+                            <%= submit_tag 'Iniciar Sesión', class: 'btn btn-default' %>
+                            <%= link_to '¿Olvido su Contraseña?' %>
+                        <%end%>

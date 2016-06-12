@@ -1,0 +1,64 @@
+<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Lista de Promociones</h3>
+</div>
+ 
+<div class="row">
+  <div class="col-xs-12">
+    <div class="input-group">
+      <%= text_field_tag 'txtbuscar_promotions',nil, placeholder: 'Buscar...', class: 'form-control' %>
+      <span class="input-group-btn">
+      <%= button_tag '', class: 'btn btn-default',id: 'bt_buscar_promotions', type: 'button' do%>
+        <%= content_tag(:span,'', class: "icon-magnifying-glass") %>
+      <%end %>
+          </span>
+    </div>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<br>
+
+<div id="result_promotions">
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr class="active" style="font-size:12px;">
+        <th>Descripcion</th>
+        <th>Membresia</th>
+        <th>Monto</th>
+        <th>Descuento (%)</th>
+        <th>Total</th>
+        <th>F. INICIO</th>
+        <th>F. FINAL</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @ultimas_promociones.each do |m| %>
+      <%if m.estatus =='A' %>
+      <tr id="activos">
+        <td><%= m.descripcion %></td>
+        <td><%= m.nombre %></td>
+        <td><%= m.monto %></td>
+        <td><%= m.descuento %></td>
+        <td><%= m.total %></td>
+        <td><%= m.f_inicio %></td>
+        <td><%= m.f_fin %></td>
+        <td><%= link_to 'Mostrar', '#' %></td>
+        <td><%= link_to 'Editar', '#' %></td>
+        <td><%= link_to 'Eliminar', '#' %></td>
+      </tr>
+      <%else %>
+      <tr id="eliminados">
+        <td><%= m.nombre %></td>
+        <td><%= m.estatus %></td>
+        <td><%= link_to 'Mostrar', '#' %></td>
+        <td><%= link_to 'Editar', '#' %></td>
+        <td><%= link_to 'Eliminar', '#' %></td>
+      </tr>
+      <%end%>
+    <% end %>
+    </tbody>
+  </table>
+  </div>
+</div>
+<br>

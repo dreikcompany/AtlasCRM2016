@@ -1,0 +1,5 @@
+<%if @user.nil? %>  	
+<span style='color:green;'>Usuario <%=@nom_user %> Disponible</span>
+<%else%>
+<span style='color:red;'>El Usuario <%=@nom_user %> no esta Disponible</span>
+<%end%>

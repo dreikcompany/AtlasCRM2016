@@ -1,0 +1,42 @@
+<div id="element_template" class="introLoading"></div>
+<div id="formulario">
+<div class="row">
+  <div class="col-xs-12">
+  <ul class="nav nav-tabs nav-justified">
+      <li class="active"><a data-toggle="tab" href="#inicio"><i class="fa fa-home fa-3x"></i>Inicio</a></li>
+      <li><a data-toggle="tab" href="#clientes"><i class="fa fa-user fa-3x"></i>Clientes</a></li>
+      <li><a data-toggle="tab" href="#productos"><i class="fa fa-product-hunt fa-3x"></i>Productos</a></li>
+      <li><a data-toggle="tab" href="#ejecutivos"><i class="fa fa-users fa-3x"></i>Ejecutivos</a></li>
+        <li><a data-toggle="tab" href="#analistas"><i class="fa fa-users fa-3x"></i>Analistas</a></li>
+        <li><a data-toggle="tab" href="#reuniones"><i class="fa fa-suitcase fa-3x"></i>Reuniones</a></li>
+        <li><a data-toggle="tab" href="#perfil"><i class="fa fa-building-o fa-3x"></i>Perfil</a></li>
+    </ul>
+
+  <div class="tab-content">
+      <div id="inicio" class="tab-pane fade in active">
+       <%= render 'inicio' %>     
+
+
+      </div>
+      <div id="clientes" class="tab-pane fade">
+          <%=render 'lista_clientes'%>
+      </div>
+      <div id="productos" class="tab-pane fade">
+      <%=render 'lista_productos'%> 
+      </div>
+      <div id="ejecutivos" class="tab-pane fade">
+       <%=render 'lista_ejecutivos'%> 
+      </div>
+      <div id="analistas" class="tab-pane fade">
+        <%=render 'lista_analistas'%>  
+      </div>
+      <div id="reuniones" class="tab-pane fade">
+        <%=render 'lista_reuniones'%> 
+      </div>
+      <div id="perfil" class="tab-pane fade">
+        <%=render 'perfil_empresa'%> 
+      </div>
+  </div>
+  </div>
+</div>
+</div>

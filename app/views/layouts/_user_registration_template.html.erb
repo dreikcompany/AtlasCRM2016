@@ -1,0 +1,27 @@
+        <!-- Pantalla de Registro-->
+        <div class="modal fade" id="registro_user" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" id="modal_header_template2" align="center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div id="logo_login_template2"></div>
+                    </div>
+                    <div class="modal-body" id="modal_body_template2">
+	                    <div id="scroll_modal_registration">
+	                        <div id="content_redSocial">
+                                <a href="#"><%= image_tag("facebook.png", alt: "facebook", size: "32x32" ) %></a>
+                                <a href="#"><%= image_tag("twitter.png", alt: "facebook", size: "32x32" ) %></a>
+                                <a href="#"><%= image_tag("googleplus.png", alt: "facebook", size: "32x32" ) %></a>
+                                <a href="#"><%= image_tag("linkedin.png", alt: "facebook", size: "32x32" ) %></a>
+                            </div>
+	                        <br>
+							<%= render 'layouts/form_user_registration_template' %>
+	                    </div>
+                    </div>
+                    <div class="modal-footer" id="modal_footer_template2">
+                    </div>
+                </div>
+            </div>
+        </div>

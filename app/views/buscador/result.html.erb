@@ -1,0 +1,47 @@
+<br>
+<div class="row" style="">
+  <div class="col-xs-2">
+    <div id="logo"></div>
+  </div>
+  <div class="col-xs-8" style="margin-top:10px;">
+    <%=form_tag buscador_result_path, :class => 'form-horizontal', multipart: false do %>
+    <div class="input-group">
+      <%= text_field_tag 'txtbuscar',@s.strip, placeholder: 'Buscar...', class: 'form-control' %>
+      <span class="input-group-btn">
+      <%= button_tag '', class: 'btn btn-default' do%>
+        <%= content_tag(:span,'', class: "icon-magnifying-glass") %>
+      <%end %>
+          </span>
+    </div>
+    <%end%>
+  </div>
+  <div class="col-xs-2"></div>
+</div>
+<br>
+<div class="row" style="">
+  <div class="col-xs-2"></div>
+  <div class="col-xs-8">
+  <%if @enterprises.empty?%>
+    <p>No se encontraron resultados</p>
+  <%else%>
+    <div class="table-responsive">          
+      <table>
+        <tbody>
+        <% @enterprises.each do |enterprise| %>
+          <tr>
+            <td><%=link_to enterprise.nom_enterprise, atlascrm_com_path(enterprise.nom_intranet) %></td>
+          </tr>
+          <tr>
+            <td style="text-align:justify;"><%= enterprise.descripcion %></td>
+          </tr>
+          <tr>
+            <td><br></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%end%>
+    </div>
+    <div class="col-xs-2"></div>
+  </div>

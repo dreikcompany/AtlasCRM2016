@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @membership.nombre %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @membership.monto %>
+</p>
+
+<p>
+  <strong>Estatus:</strong>
+  <%= @membership.estatus %>
+</p>
+
+<%= link_to 'Editar', edit_membership_path(@membership) %> |
+<%= link_to 'Salir', memberships_path %>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= favicon_link_tag 'favicon.png' %>
+  <title>Atlas CRM</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<link rel="stylesheet" type="text/css" href="/css/regempresa.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link href="/css/font-awesome.min.css" rel="stylesheet" />
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body id="bodyform">
+  <div class="container" id ="principal">
+     
+ <div class="row" id="divarriba">
+ <div class ="col-sm-6">
+<img  src="/images/atlasmundo.png" alt="Atlas CRM" id="logoatlas">
+
+</div>
+<div class ="col-sm-6">
+<h1 id="registro">Registro</h1>
+</div>
+</div>
+<div class ="container"id="divcentral">
+<div class ="row" >
+<div class="col-sm-12">
+<p id="tituloregistro">Registro de <img  src="/images/atlasfooter.png" alt="Atlas CRM" id="logoatlas2"></p> 
+</div>
+
+</div>
+
+
+<div class ="row">
+<div class="col-sm-12">
+
+<div class="form" id="formulario">
+      <form class="form-validate form-horizontal " id="register_form" method="get" action="">
+
+ <div class="form-group ">
+<label for="fullname" class="control-label col-sm-4">Nombre de la Compañia:<span class="required">*</span></label>
+<div class="col-sm-6">
+<input class=" form-control" id="fullname" name="fullname" type="text" />
+</div>
+</div>
+
+  <div id="formintranet">
+ <div class="form-group ">
+<label for="fullname" class="control-label col-sm-4">Nombre de la intranet:<span class="required">*</span></label>
+<div class="col-sm-4">
+<input class=" form-control" id="fullname" name="fullname" type="text" />
+<label style="font-size:10px; font-family:'Arial'">Entre 3 y 30 Caracteres</label>
+</div>
+<label for="fullname" class="col-sm-4" id="labelatlas">.atlascrm.com</label>
+</div>
+</div>
+
+ <div class="form-group ">
+<label for="fullname" class="control-label col-sm-4">Primer Nombre:<span class="required">*</span></label>
+<div class="col-sm-6">
+<input class=" form-control" id="fullname" name="fullname" type="text" />
+</div>
+</div>
+
+ <div class="form-group ">
+<label for="fullname" class="control-label col-sm-4">Apellido:<span class="required">*</span></label>
+<div class="col-sm-6">
+<input class=" form-control" id="fullname" name="fullname" type="text" />
+</div>
+</div>
+
+
+
+<div class="form-group ">
+<label for="fullname" class="control-label col-sm-4">Contrasena:<span class="required">*</span></label>
+<div class="col-sm-6">
+<input class=" form-control" id="fullname" name="fullname" type="text" />
+</div>
+</div>
+
+<div class="form-group ">
+<label for="fullname" class="control-label col-sm-4">Repetir Contrasena:<span class="required">*</span></label>
+<div class="col-sm-6">
+<input class=" form-control" id="fullname" name="fullname" type="text" />
+</div>
+</div>
+
+
+  <div class="form-group ">
+  
+  <div class="col-sm-offset-4 col-sm-2">
+  <input  type="checkbox" style="width: 25px; border:dashed;" class="checkbox form-control" id="agree" name="agree" />
+  </div>
+  <label for="agree" class="col-sm-6" style="text-align:left;">Acepto los terminos de uso <span class="required">*</span></label>
+  </div>
+
+ <div class="form-group">
+ <div class="col-lg-offset-4 col-sm-8">
+ <button class="btn btn-primary" style ="border-radius:20px 20px 20px 20px; width: 85px;"type="submit">Crear</button>
+ </div>
+ </div>
+
+
+
+
+
+</div>
+
+</form>
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+</body>
+</html>

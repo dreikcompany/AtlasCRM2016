@@ -1,0 +1,52 @@
+<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Reuniones Programadas</h3>
+</div>
+ 
+ <div class="row">
+  <div class="col-xs-12">
+    <div class="input-group">
+      <%= text_field_tag 'txtbuscar_reuniones',nil, placeholder: 'Buscar...', class: 'form-control' %>
+      <span class="input-group-btn">
+      <%= button_tag '', class: 'btn btn-default',id: 'bt_buscar_buscarreuniones', type: 'button' do%>
+        <%= content_tag(:span,'', class: "icon-magnifying-glass") %>
+      <%end %>
+          </span>
+    </div>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<div id="resultados2">
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr class="active" style="font-size:12px;">
+      <th>Asunto</th>
+      <th>Informacion</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Lugar</th>
+    
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @reuniones.each do |reunion| %>
+     
+      <tr id="activos">
+        <td><%= reunion.asunto %></td>
+        <td><%= reunion.informacion%></td>
+        <td><%= reunion.fecha %></td>
+        <td><%= reunion.hora %></td>
+        <td><%= reunion.lugar %></td>
+        
+        <td><%= link_to 'Mostrar', '#' %></td>
+        <td><%= link_to 'Editar', '#' %></td>
+        <td><%= link_to 'Eliminar', '#' %></td>
+      </tr> 
+     
+    <% end %> 
+    </tbody>
+  </table>
+  </div>
+<!--<%= link_to 'Nuevo Rol', new_role_path %>-->
+</div>

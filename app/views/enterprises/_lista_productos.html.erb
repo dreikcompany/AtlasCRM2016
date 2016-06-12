@@ -1,0 +1,31 @@
+<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Productos de la empresa</h3>
+</div>
+ 
+ <div class="row">
+  <div class="col-xs-12">
+    <div class="input-group">
+      <%= text_field_tag 'txtbuscar_productos',nil, placeholder: 'Buscar...', class: 'form-control' %>
+      <span class="input-group-btn">
+      <%= button_tag '', class: 'btn btn-default',id: 'bt_buscar_productos', type: 'button' do%>
+        <%= content_tag(:span,'', class: "icon-magnifying-glass") %>
+      <%end %>
+          </span>
+    </div>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+<br>
+  <div class="row">
+    <% @productos.each do |product| %>
+
+    <div class="col-xs-12 col-sm-4 text-center">  
+      <div id="products">
+        <%= image_tag (product.fotoprincipal.url),size: '300x300',style: 'border-radius: 10px 10px 10px 10px;' %>
+        <p id="parrafos"><strong><%= product.nombre %></strong></p>
+        <p id="parrafos"><strong><%= product.precio %>Bs</strong></p>
+
+    </div>
+    </div>
+      
+    <% end %>
+</div>

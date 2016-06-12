@@ -1,0 +1,57 @@
+<%=form_tag users_crear_user_enterprise_path, :class => 'form-horizontal', multipart: false, remote: false do %>
+    <div class="form-group">
+        <%= label_tag 'nom_enterprise', 'Compañia:*', class: 'control-label col-xs-3' %>
+        <div class="col-xs-9">
+            <%= text_field_tag 'nom_enterprise',nil, placeholder: 'ejemplo: AtlasCRM C.A.', class: 'form-control' %>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= label_tag 'nom_intranet', 'Intranet:*', class: 'control-label col-xs-3' %>
+        <div class="col-xs-6">
+            <%= text_field_tag 'nom_intranet',nil, placeholder: 'ejemplo: AtlasCRM', class: 'form-control' %>
+        </div>
+        <%= label_tag 'intranet', '.atlascrm.com', class: 'control-label col-xs-3', style:'margin-left:-30px;' %>
+    </div>
+    <div class="form-group">
+        <%= label_tag 'email', 'Email:*', class: 'control-label col-xs-3' %>
+        <div class="col-xs-9">
+            <%= text_field_tag 'email',nil, placeholder: 'ejemplo@atlascrm.com', class: 'form-control' %>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= label_tag 'nom_user', 'Usuario:*', class: 'control-label col-xs-3' %>
+        <div class="col-xs-9">
+            <%= text_field_tag 'nom_user',nil, placeholder: 'Usuario', class: 'form-control' %>
+        </div>
+    </div>
+    <div class="row">
+    <%= label_tag 'resultados', '', class: 'control-label col-xs-3' %>
+        <div class="col-xs-9" id="resultados" style="font-size: 11px;"></div>
+    </div>
+    <div class="form-group">
+        <%= label_tag 'clave', 'Contraseña:*', class: 'control-label col-xs-3' %>
+        <div class="col-xs-9">
+            <%= password_field_tag 'clave',nil, placeholder: '********', class: 'form-control' %>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= label_tag 're_clave', 'R. Contraseña:*', class: 'control-label col-xs-3' %>
+        <div class="col-xs-9">
+            <%= password_field_tag 're_clave',nil, placeholder: '********', class: 'form-control' %>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= label_tag 'check', '', class: 'control-label col-xs-3' %>
+        <div class="checkbox col-xs-9">
+            <label>
+                <%= check_box_tag 'terminos' %>Acepto los <a href="#" id="Terminos">Terminos</a>
+            </label>
+        </div>
+    </div>
+    <div class="form-group">
+        <%= label_tag 'botones', '', class: 'control-label col-xs-3' %>
+        <div class="col-xs-9">
+            <%= submit_tag 'Registrar', class: 'btn btn-primary' %>
+        </div>
+    </div>
+<%end%>

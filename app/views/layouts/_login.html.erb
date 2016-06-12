@@ -1,0 +1,24 @@
+		<div class="modal fade" id="ventana" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" id="modal_header" align="center">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div id="logo_login"></div>
+                    </div>
+                    <div class="modal-body" id="modal_body">
+                        <div id="content_redSocial">
+                            <a href="#"><%= image_tag("facebook.png", alt: "facebook", size: "32x32" ) %></a>
+                            <a href="#"><%= image_tag("twitter.png", alt: "facebook", size: "32x32" ) %></a>
+                            <a href="#"><%= image_tag("googleplus.png", alt: "facebook", size: "32x32" ) %></a>
+                            <a href="#"><%= image_tag("linkedin.png", alt: "facebook", size: "32x32" ) %></a>
+                        </div>
+                        <br>
+                        <%= render 'layouts/form_user' %>
+                    </div>
+                    <div class="modal-footer" id="modal_footer">
+                    </div>
+                </div>
+            </div>
+        </div>

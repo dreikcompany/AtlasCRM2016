@@ -1,0 +1,21 @@
+<% session.clear %>
+<div class="row" style="margin-top:10%;margin-left: 40%;">
+	<div id="logo"></div>
+</div>
+
+<div class="row" style="">
+	<div class="col-xs-2"></div>
+	<div class="col-xs-8">
+		<%=form_tag buscador_result_path, :class => 'form-horizontal', multipart: false do %>
+		<div class="input-group">
+			<%= text_field_tag 'txtbuscar',nil, placeholder: 'Buscar...', class: 'form-control' %>
+			<span class="input-group-btn">
+			<%= button_tag '', class: 'btn btn-default' do%>
+				<%= content_tag(:span,'', class: "icon-magnifying-glass") %>
+			<%end %>
+	      	</span>
+		</div>
+		<%end%>
+	</div>
+	<div class="col-xs-2"></div>
+</div>

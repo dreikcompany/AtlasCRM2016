@@ -1,0 +1,23 @@
+<div id="formulario">
+<div class="row">
+  <div class="col-xs-12">
+	<ul class="nav nav-tabs nav-justified">
+	    <li class="active"><a data-toggle="tab" href="#new"><i class="fa fa-home fa-3x"></i>Nueva</a></li>
+	    <li><a data-toggle="tab" href="#lista"><i class="fa fa-suitcase fa-3x"></i>Promociones</a></li>
+	    <li><a data-toggle="tab" href="#promocion"><i class="fa fa-tasks fa-3x"></i>Difundir Promoción</a></li>
+  	</ul>
+
+	<div class="tab-content">
+	    <div id="new" class="tab-pane fade in active">
+	      	<%=render 'new'%>
+	    </div>
+	    <div id="lista" class="tab-pane fade">
+	      	<%=render 'lista'%>
+	    </div>
+	    <div id="promocion" class="tab-pane fade">
+	      	<%=render 'difundir'%>
+	    </div>
+	</div>
+  </div>
+</div>
+</div>

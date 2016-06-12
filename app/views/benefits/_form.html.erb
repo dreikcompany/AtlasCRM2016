@@ -1,0 +1,33 @@
+ <%= form_for(@benefit) do |f| %>
+<fieldset id="formulario_base">
+<legend id="formulario_title"><p>Beneficio</p></legend>
+<div class="form-group">
+  <% if @benefit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@benefit.errors.count, "error") %> prohibited this benefit from being saved:</h2>
+      <ul>
+      <% @benefit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+  <div class="form-group">
+    <%= f.label :descripcion, for: 'descripcion', class: 'col-xs-3 col-sm-2 control-label'  %>
+    <div class="col-xs-9 col-sm-10">
+    <%= f.text_field :descripcion, class: 'form-control', id:'descripcion' %>
+    </div>
+  </div>
+  <div class="form-group hidden-xs hidden-sm hidden-md hidden-lg">
+    <%= f.label :estatus %>
+    <%= f.text_field :estatus, :value =>'A' %>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12">
+      <br>
+      <%= f.submit nil , class: 'btn btn-default' %>
+    </div>
+  </div>
+  </fieldset>
+<% end %>

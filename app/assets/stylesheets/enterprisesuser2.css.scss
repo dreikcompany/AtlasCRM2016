@@ -1,0 +1,185 @@
+// Place all the styles related to the enterprisesuser2 controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#divcentral{
+ width:80%; 
+ height:auto;
+ background:white;
+border-radius:12px 12px 12px 12px;
+margin: 0 auto;
+box-shadow: 0 0 50px black;
+}
+
+#divarriba{
+width:80%; 
+height:100px;
+margin: 0 auto;
+}
+
+#principal{
+
+padding:65px 0;
+
+}
+#logoatlas2{
+width:100px;
+ height:40px;
+ text-align: right; 
+ margin: 0 auto; 
+ max-width: 100%;	
+
+}
+#logoatlas{
+ width:275px;
+ height:80px;
+ float: left; 
+ margin: 0 auto; 
+ display: block;
+ max-width: 100%;
+}
+
+ #registro {
+    font-family: 'Arial', cursive;
+    font-size: 40px;
+    text-align: right;
+  margin-top:6%;
+    color: #000;
+    font-weight: bold;
+ 
+}
+h2{
+font-family: 'Arial', cursive;
+color: #000;
+font-weight: bold;
+text-align: center;
+
+}
+#tituloregistro{
+   font-family: 'Arial', cursive;
+    font-size: 40px;
+    text-align: center;
+  /*margin-top:6%;*/
+    color: #000;
+    font-weight: bold;
+}
+
+.form .required{
+    font-size: 16px;
+    color: blue;
+}
+
+.form-control:-moz-placeholder {
+  color: #d7d7d7;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #8e8e93;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #c7c7cc;
+  border-radius: 4px;  
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#formulario{
+padding-top: 1%;
+padding-bottom: 1%;
+}
+#formintranet{
+
+	background:#CCFFFF;
+	padding: 2%; 
+	border-radius: 6px 6px 6px 6px;
+
+}
+#labelatlas{
+font-size: 20px;
+font-weight: bold;
+font-family: 'Arial';
+
+}
+
+.social{
+  text-align: center;
+  padding:2%
+}
+
+
+.social-share{
+ display: inline-block;
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+ul.social-share li {
+  display: inline-block;
+}
+
+ul.social-share li a {
+  display: inline-block;
+  color: #fff;
+  /*background: #404040;*/  
+  width: 45px;
+  height: 45px;
+  line-height:45px;
+  text-align: center;
+  border-radius: 4px;
+
+}
+
+ul.social-share li a:hover {
+  background: #00BFFF;/***color azul turquesa***/
+  color: #FFFAFA;
+ 
+}
+
+#divcorreo{
+  text-align: center;
+
+}
+#iconocorreo{
+width:80px;
+ height:80px;
+ text-align: left; 
+ margin: 0 auto; 
+ max-width: 100%; 
+
+
+}
+#titulocorreo{
+   font-family: 'Arial', cursive;
+    font-size: 20px;
+    text-align: right;
+  /*margin-top:6%;*/
+    color: #000;
+    font-weight: bold;
+
+}
+#cajacorreo{
+width: 500px;
+height: 50px;
+border-radius: 10px 10px 10px 10px;
+border: solid;
+max-width: 100%;
+border-color:#3399FF; 
+}
+#btnregistrar{
+ width: 180px;
+ height: 50px;
+ border-radius: 10px 10px 10px 10px;
+ background:#3399FF;
+
+
+}
+#textoboton{
+   font-family: 'Arial', cursive;
+   font-weight: bold;
+   color:white;
+}

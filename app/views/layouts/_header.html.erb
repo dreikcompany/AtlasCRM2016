@@ -1,0 +1,34 @@
+		<section class="row">
+            <div class="col-xs-12 col-sm-3"><!-- 3 Columnas Boton de Menu y Logo o Texto -->
+                <div id="menu_desplegable"></div>
+                <div id="logo"></div>
+            </div><!-- Fin 3 Columnas --> 
+
+            <div class="col-xs-12 col-sm-4">
+                <nav>
+                    <ul id="navegacion">
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Planes</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+                <div id="liveclock" class="clock"></div>
+            </div>
+
+            <div class="col-xs-12 col-sm-5">
+                <nav>
+                    <ul id="navegacion">
+                        <li><a href="#ventana" data-toggle="modal">Iniciar Sesión</a></li>
+                        <li style="color: white;">|</li>
+                        <li><a href="#registro_user" data-toggle="modal">Registrarse</a></li>
+                    </ul>
+                </nav>
+            </div>    
+        </section>
+        <!-- Pantalla de Login-->
+        <%= render 'layouts/login' %>
+        <%= render 'layouts/user_registration' %>      

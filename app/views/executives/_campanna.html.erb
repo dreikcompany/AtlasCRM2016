@@ -1,0 +1,67 @@
+<div class="scroll_form">
+	<%=form_tag executives_create_path, :class => 'form-horizontal', multipart: false do %>
+		<div class="form-group">
+	        <div class="col-xs-12">
+	        	<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+				  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Registro de Campañas</h3>
+				</div>
+	        </div>
+	    </div>
+
+
+
+		<div class="form-group">
+	    	<%= label_tag 'nombre', 'Nombre:*', class: 'control-label col-xs-12', style: 'text-align:left;' %> 
+	        <div class="col-xs-12">
+	            <%= text_field_tag 'nombre','',id: 'nombre', class: 'form-control'%>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	    	<%= label_tag 'descripcion', 'Descripcion:*', class: 'control-label col-xs-12', style: 'text-align:left;' %> 
+	        <div class="col-xs-12">
+	            <%= text_field_tag 'descripcion','',id: 'descripcion', class: 'form-control'%>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	    	<%= label_tag 'precio', 'Precio:*', class: 'control-label col-xs-12', style: 'text-align:left;' %> 
+	        <div class="col-xs-12">
+	            <%= text_field_tag 'precio','',id: 'precio', class: 'form-control'%>
+	        </div>
+	    </div>
+
+
+	    
+	 	   	<div class="form-group">
+	        <div class="col-xs-12">
+		        <%= label_tag 'fechaini', 'Fecha_inicio:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+		        <%= date_field 'fechaini','',id: 'fechaini', class: 'form-control', name:'fechaini' %>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <div class="col-xs-12">
+		        <%= label_tag 'fechafin', 'Fecha_Fin:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+		        <%= date_field 'fechafin','',id: 'fechafin', class: 'form-control' , name:'fechafin'%>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+		        <div class="input-group">
+			      <div class="input-group-addon">%</div>
+			  	  <%= text_field_tag 'estatus','A',id: 'estatus', class: 'form-control' %>
+			    </div>
+	        </div>
+	    </div>
+
+		<div class="form-group">
+	     	<div class="col-xs-12 text-center">
+		    	<%= button_tag '', class: 'btn btn-info' do%>
+					<%= content_tag(:span,'Guardar', class: "fa fa-check") %>
+				<%end %>
+			</div>
+	    </div>
+	<%end%>
+</div>

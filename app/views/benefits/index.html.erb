@@ -1,0 +1,51 @@
+<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Lista de Beneficios</h3>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Buscar...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="icon-magnifying-glass"></span></button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+<br>
+
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr class="active">
+        <th>Descripcion</th>
+        <th>Estatus</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @benefits.each do |benefit| %>
+      <%if benefit.estatus =='A' %>
+      <tr id="activos">
+        <td><%= benefit.descripcion %></td>
+        <td><%= benefit.estatus %></td>
+        <td><%= link_to 'Mostrar', benefit %></td>
+        <td><%= link_to 'Editar', edit_benefit_path(benefit) %></td>
+        <td><%= link_to 'Eliminar', benefit, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+      </tr>
+      <%else %>
+      <tr id="eliminados">
+        <td><%= benefit.descripcion %></td>
+        <td><%= benefit.estatus %></td>
+        <td><%= link_to 'Mostrar', benefit %></td>
+        <td><%= link_to 'Editar', edit_benefit_path(benefit) %></td>
+        <td><%= link_to 'Eliminar', benefit, method: :delete, data: { confirm: '¿Estás seguro?' } %></td>
+      </tr>
+      <%end%>
+
+    <% end %>
+    </tbody>
+  </table>
+  </div>
+<%= link_to 'Nuevo Beneficio', new_benefit_path %>

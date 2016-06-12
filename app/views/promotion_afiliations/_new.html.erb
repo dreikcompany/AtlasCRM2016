@@ -1,0 +1,66 @@
+<div class="scroll_form">
+	<%=form_tag promotion_afiliations_create_path, :class => 'form-horizontal', multipart: false do %>
+		<div class="form-group">
+	        <div class="col-xs-12">
+	        	<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+				  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Registro de Promociones</h3>
+				</div>
+	        </div>
+	    </div>
+
+	   	<div class="form-group">
+	        <div class="col-xs-12">
+		        <%= label_tag 'f_inicio', 'F_Inicio:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+		        <%= date_field 'f_inicio','',id: 'f_inicio', class: 'form-control', name:'f_inicio' %>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <div class="col-xs-12">
+		        <%= label_tag 'f_fin', 'F_Fin:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+		        <%= date_field 'f_fin','',id: 'f_fin', class: 'form-control' , name:'f_fin'%>
+	        </div>
+	    </div>
+
+		<div class="form-group">
+	    	<%= label_tag 'descripcion', 'Descripcion:*', class: 'control-label col-xs-12', style: 'text-align:left;' %> 
+	        <div class="col-xs-12">
+	            <%= text_field_tag 'descripcion','',id: 'descripcion', class: 'form-control' , placeholder: 'Fin de Año' %>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <div class="col-xs-12">
+	         	<%= label_tag 'descuento', 'Descuento:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+		        <div class="input-group">
+			      <div class="input-group-addon">%</div>
+			  	  <%= text_field_tag 'descuento','',id: 'descuento', class: 'form-control' , placeholder: '0' %>
+			    </div>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <div class="col-xs-12">
+	         	<%= label_tag 'membresias', 'Membresias:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+		        <%= select("membership", "id", Membership.where('id > 1').collect {|p| [ p.nombre, p.id ] },{prompt: 'SELECCIONE'}, class: 'form-control', name: 'membership_id')%>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+		        <div class="input-group">
+			      <div class="input-group-addon">%</div>
+			  	  <%= text_field_tag 'estatus','A',id: 'estatus', class: 'form-control' %>
+			    </div>
+	        </div>
+	    </div>
+
+		<div class="form-group">
+	     	<div class="col-xs-12 text-center">
+		    	<%= button_tag '', class: 'btn btn-info' do%>
+					<%= content_tag(:span,'Guardar', class: "fa fa-check") %>
+				<%end %>
+			</div>
+	    </div>
+	<%end%>
+</div>

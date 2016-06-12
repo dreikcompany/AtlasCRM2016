@@ -1,0 +1,2 @@
+module PromotionAfiliationsHelper
+end

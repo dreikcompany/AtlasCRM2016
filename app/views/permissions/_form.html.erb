@@ -1,0 +1,41 @@
+<%= form_for(@permission) do |f| %>
+<fieldset id="formulario_base">
+<legend id="formulario_title"><p>Permiso</p></legend>
+<div class="form-group">
+  <% if @permission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@permission.errors.count, "error") %> prohibited this permission from being saved:</h2>
+      <ul>
+      <% @permission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+  <div class="form-group">
+    <%= f.label :url, for: 'url', class: 'col-xs-3 col-sm-2 control-label'  %>
+    <div class="col-xs-9 col-sm-10">
+    <%= f.text_field :url, class: 'form-control', id:'url' %>
+    </div>
+  </div>
+  <div class="form-group" ><br><br></div>
+  <div class="form-group">
+    <%= f.label :texto, for: 'texto', class: 'col-xs-3 col-sm-2 control-label'  %>
+    <div class="col-xs-9 col-sm-10">
+    <%= f.text_field :texto, class: 'form-control', id:'texto' %>
+    </div>
+  </div>
+  <div class="form-group hidden-xs hidden-sm hidden-md hidden-lg">
+    <%= f.label :estatus %>
+    <%= f.text_field :estatus, :value =>'A' %>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-12">
+      <br>
+      <%= f.submit nil , class: 'btn btn-default' %>
+    </div>
+  </div>
+  </fieldset>
+<% end %>

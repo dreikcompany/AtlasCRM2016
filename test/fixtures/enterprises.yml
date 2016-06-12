@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nom_enterprise: MyString
+  nom_intranet: MyString
+  rif: MyString
+  vision: MyString
+  mision: MyString
+  direccion: MyString
+  telefono: MyString
+  slogan: MyString
+  user_id: 1
+
+two:
+  nom_enterprise: MyString
+  nom_intranet: MyString
+  rif: MyString
+  vision: MyString
+  mision: MyString
+  direccion: MyString
+  telefono: MyString
+  slogan: MyString
+  user_id: 1

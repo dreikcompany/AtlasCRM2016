@@ -1,0 +1,33 @@
+<div class="scroll_form">
+	<%=form_tag promotion_afiliations_correo_path, :class => 'form-horizontal', multipart: false do %>
+		<div class="form-group">
+	        <div class="col-xs-12">
+	        	<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+				  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Membresias en Promoción</h3>
+				</div>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	        <div class="col-xs-12">
+	         	<%= label_tag 'membresias', 'Membresias:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+		        <%= select("membership", "id", Membership.where('id > 1').collect {|p| [ p.nombre, p.id ] },{prompt: 'SELECCIONE'}, class: 'form-control', name: 'membership_id')%>
+	        </div>
+	    </div>
+
+	    <div class="form-group">
+	    	<%= label_tag 'mensaje', 'Mensaje:*', class: 'control-label col-xs-12', style: 'text-align:left;' %> 
+	        <div class="col-xs-12">
+	            <%= text_area_tag 'mensaje','',id: 'mensaje', class: 'form-control' ,rows: 6, cols: 25 %>
+	        </div>
+	    </div>
+
+		<div class="form-group">
+	     	<div class="col-xs-12 text-center">
+		    	<%= button_tag '', class: 'btn btn-info' do%>
+					<%= content_tag(:span,'Enviar', class: "fa fa-check") %>
+				<%end %>
+			</div>
+	    </div>
+	<%end%>
+</div>

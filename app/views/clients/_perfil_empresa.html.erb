@@ -1,0 +1,72 @@
+<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Perfil de la empresa</h3>
+</div>
+<%=form_tag enterprises_crear_executive_enterprise_path, :class => 'form-horizontal', multipart: false, remote: false do %>
+<form>
+		  <div class="form-group">
+		  <br>
+		    <label for="exampleInputEmail1" class="col-xs-offset-2 col-xs-9">Nombre de la Empresa</label>
+		    <div class="col-xs-offset-2 col-xs-9">
+			   <%= text_field_tag 'nombre',@enterprise.nom_enterprise, class: 'form-control' %>
+			</div>
+			<br><br><br>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-xs-offset-2 col-xs-9">Rif</label>
+		    <div class="col-xs-offset-2 col-xs-9">
+			  <%= text_field_tag 'rif',@enterprise.rif, class: 'form-control' %>
+			</div>
+			<br><br><br>
+		  </div>
+
+            <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-xs-offset-2 col-xs-9">Descripcion</label>
+		    <div class="col-xs-offset-2 col-xs-9">
+			  <%= text_field_tag 'descripcion',@enterprise.descripcion, class: 'form-control' %>
+			</div>
+			<br><br><br>
+		    </div>
+
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-xs-offset-2 col-xs-9">Dirección</label>
+		  	<div class="col-xs-offset-2 col-xs-9">
+		  		<%= text_field_tag 'direccion',@enterprise.direccion, class: 'form-control' %>
+		  		<br>
+		  	</div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-xs-offset-2 col-xs-9">Slogan</label>
+		    <div class="col-xs-offset-2 col-xs-9">
+			    <%= text_field_tag 'slogan',@enterprise.slogan, class: 'form-control' %>
+			    <br>
+			</div>
+		  </div>
+		  
+	
+		  
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-xs-offset-2 col-xs-9">Misión</label>
+		  	<div class="col-xs-offset-2 col-xs-9">
+		  		<%= text_field_tag 'mision',@enterprise.mision, class: 'form-control' %>
+		  		<br>
+		  	</div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="exampleInputEmail1" class="col-xs-offset-2 col-xs-9">Visión</label>
+		  	<div class="col-xs-offset-2 col-xs-9">
+		 		<%= text_field_tag 'vision',@enterprise.vision, class: 'form-control' %>
+		  		<br>
+		  	</div>
+		  </div>
+
+		  <div class="form-group">
+				<div class="col-xs-offset-2 col-xs-10">
+				    <button type="submit" class="btn btn-success">Guardar</button>
+			    </div>
+		  </div>
+
+		</form>
+		<%end %>

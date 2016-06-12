@@ -1,0 +1,41 @@
+<div id="element_template" class="introLoading"></div>
+<div id="formulario">
+<div class="row">
+  <div class="col-xs-12">
+	<ul class="nav nav-tabs nav-justified">
+	
+	    <li class="active"><a data-toggle="tab" href="#campanna"><i class="fa fa-suitcase fa-3x"></i>Campaña</a></li>	
+	    <li><a data-toggle="tab" href="#difusion"><i class="fa fa-tasks fa-3x"></i>Difusion</a></li>   
+	    <li><a data-toggle="tab" href="#sociales"><i class="fa fa-tasks fa-3x"></i>Sociales</a></li>
+	     <li><a data-toggle="tab" href="#llamada"><i class="fa fa-tasks fa-3x"></i>LLamadas</a></li>
+	      <li><a data-toggle="tab" href="#reunion"><i class="fa fa-tasks fa-3x"></i>Reuniones</a></li>
+  	</ul>
+
+	<div class="tab-content">
+
+	    <div id="campanna" class="tab-pane fade in active">
+	      	<%=render 'campanna'%>
+	    </div>
+
+        <div id="difusion" class="tab-pane fade">
+	      	<%=render 'difusion'%>
+	    </div>
+
+
+	    <div id="sociales" class="tab-pane fade">
+	      	<%=render 'sociales'%>
+	    </div>
+	  
+	    <div id="llamada" class="tab-pane fade">
+	      	<%=render 'llamada'%>
+	    </div>
+
+	    <div id="reunion" class="tab-pane fade">
+	      	<%=render 'reunion'%>
+	    </div>
+	   
+	
+  </div>
+</div>
+</div>
+</div>

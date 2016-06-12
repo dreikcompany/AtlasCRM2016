@@ -1,0 +1,16 @@
+<%if session[:nom_enterprise] %>
+<section class="row hidden-xs hidden-sm hidden-md hidden-lg">
+	<form>
+		<input type="text" value=<%=session[:bg_h_f]%> id="c_bg_h_f">
+		<input type="text" value=<%=session[:bg_a]%> id="c_bg_a">
+		<input type="text" value=<%=session[:logo]%> id="c_logo">
+		<input type="text" value=<%=session[:slider1]%> id="c_slider1">
+		<input type="text" value=<%=session[:slider2]%> id="c_slider2">
+		<input type="text" value=<%=session[:slider3]%> id="c_slider3">
+		<input type="text" value=<%=session[:favicon]%> id="c_favicon">
+		<input type="text" value=<%=session[:t_slider1]%> id="c_t_slider1">
+		<input type="text" value=<%=session[:t_slider2]%> id="c_t_slider2">
+		<input type="text" value=<%=session[:t_slider3]%> id="c_t_slider3">
+	</form>
+</section>
+<%end%>

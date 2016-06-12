@@ -1,0 +1,104 @@
+<section class="row">
+	<div class="hidden-xs col-sm-1"></div>
+	<div class="col-xs-12 col-sm-10">
+		<h3 align="center">Configuración de Plantilla</h3>
+		<div id="formulario">
+			<%=form_tag template_update_path, :class => 'form-horizontal', multipart: true do %>
+			    <div class="form-group">
+			    	<%= label_tag 'header_footer', 'BG Header/Footer:*', class: 'control-label col-xs-12', style: 'text-align:left;' %> 
+			        <div class="col-xs-12">
+			            <%= text_field_tag '',@template.bg_h,id: 'bg_h', class: 'pick-a-color form-control' %>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			    	<%= label_tag 'app', 'BG Aplicación:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+			        <div class="col-xs-12">
+			            <%= text_field_tag '',@template.bg_a,id: 'bg_a', class: 'pick-a-color form-control' %>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			    	<%= label_tag 'Logo', 'Logo:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+			        <div class="col-xs-12">
+				    	<div id="v_previa_1" class="v_previa thumbnail">
+						   <a href="#" id="logo-select" class="btn btn-default">Elegir archivo</a>
+						    <%= image_tag(@template.logo.url, alt: "", class: "img" ) %>
+						</div>
+						<span class="archivo-info alert alert-info" id="logo-info">No hay archivo aún</span>
+						<%= file_field_tag 'logo',id: 'logo', class: 'archivo' %>
+					</div>
+			    </div>
+			    <div class="form-group">
+			    	<%= label_tag 'slider', 'Slider:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+			        <div class="col-xs-4">
+				    	<div id="v_previa_3" class="v_previa thumbnail">
+						   <a href="#" id="slider1-select" class="btn btn-default">Elegir archivo</a>
+						    <%= image_tag(@template.slider1.url, alt: "", class: "img" ) %>
+						</div>
+						<span class="archivo-info alert alert-info" id="slider1-info">No hay archivo aún</span>
+						<%= file_field_tag 'slider1',id: 'slider1', class: 'archivo' %>
+					</div>
+					<div class="col-xs-4">
+				    	<div id="v_previa_4" class="v_previa thumbnail">
+						   <a href="#" id="slider2-select" class="btn btn-default">Elegir archivo</a>
+						    <%= image_tag(@template.slider2.url, alt: "", class: "img" ) %>
+						</div>
+						<span class="archivo-info alert alert-info" id="slider2-info">No hay archivo aún</span>
+						<%= file_field_tag 'slider2',id: 'slider2', class: 'archivo' %>
+					</div>
+					<div class="col-xs-4">
+				    	<div id="v_previa_5" class="v_previa thumbnail">
+						   <a href="#" id="slider3-select" class="btn btn-default">Elegir archivo</a>
+						    <%= image_tag(@template.slider3.url, alt: "", class: "img" ) %>
+						</div>
+						<span class="archivo-info alert alert-info" id="slider3-info">No hay archivo aún</span>
+						<%= file_field_tag 'slider3',id: 'slider3', class: 'archivo' %>
+					</div>
+			    </div>
+			    <div class="form-group">
+			    	<%= label_tag 't_slider', 'Leyenda Slider:*', class: 'control-label col-xs-12', style: 'text-align:left;' %> 
+			        <div class="col-xs-12">
+			        <br>
+			            <%= text_field_tag 't_slider1',@template.t_slider1,id: 't_slider1', class: 'form-control' , placeholder: 'leyenda slider1' %>
+			        </div>
+			        <div class="col-xs-12">
+			        <br>
+			            <%= text_field_tag 't_slider2',@template.t_slider2,id: 't_slider2', class: 'form-control' , placeholder: 'leyenda slider2' %>
+			        </div>
+			        <div class="col-xs-12">
+			        <br>
+			            <%= text_field_tag 't_slider3',@template.t_slider3,id: 't_slider3', class: 'form-control' , placeholder: 'leyenda slider3' %>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			    	<%= label_tag 'favicon', 'Favicon:*', class: 'control-label col-xs-12', style: 'text-align:left;' %>
+			        <div class="col-xs-12">
+				    	<div id="v_previa_2" class="v_previa thumbnail">
+						   <a href="#" id="favicon-select" class="btn btn-default">Elegir archivo</a>
+						    <%= image_tag(@template.favicon.url, alt: "", class: "img" ) %>
+						</div>
+						<span class="archivo-info alert alert-info" id="favicon-info">No hay archivo aún</span>
+						<%= file_field_tag 'favicon',id: 'favicon', class: 'archivo' %>
+					</div>
+			    </div>
+			    <div class="form-group">
+			        <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+			        	<%= text_field_tag 'enterprise_id',@enterprise.id,id: 'enterprise_id', class: 'form-control'%>
+			            <%= text_field_tag 'estatus','A',id: 'estatus', class: 'form-control'%>
+			        </div>
+			    </div>
+			    <div class="form-group">
+			     	<div class="col-xs-6 text-center">
+				    	<%= button_tag '', class: 'btn btn-info' do%>
+							<%= content_tag(:span,'Guardar', class: "fa fa-check") %>
+						<%end %>
+					</div>
+					<div class="col-xs-6 text-center">
+				    	<%= button_tag '', class: 'btn btn-danger', type: 'button' , id: 'salir_template' do%>
+							<%= content_tag(:span,'Salir', class: "fa fa-sign-out") %>
+						<%end %>
+					</div>
+			    </div>
+			<%end%>
+		</div>
+	</div>
+</section>

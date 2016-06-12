@@ -1,0 +1,81 @@
+<div id="formulario_title" style="margin: 0 auto;width:50%;" >
+  <h3 align="center" style="color:white;font-size:130%;line-height: 120%;">Ejecutivos de la empresa</h3>
+</div>
+ 
+ <div class="row">
+  <div class="col-xs-12">
+
+    <div class="input-group">
+      <%= text_field_tag 'txtbuscar_ejecutivos',nil, placeholder: 'Buscar...', class: 'form-control' %>
+      <span class="input-group-btn">
+      <%= button_tag '', class: 'btn btn-default',id: 'bt_buscar_ejecutivos', type: 'button' do%>
+        <%= content_tag(:span,'', class: "icon-magnifying-glass") %>
+      <%end %>
+          </span>
+    </div>
+
+  </div><!-- /.col-lg-6 -->
+
+</div><!-- /.row -->
+
+<div id="resultados2">
+  <div class="table-responsive">          
+  <table class="table">
+    <thead>
+      <tr class="active" style="font-size:12px;">
+      <th>Foto Perfil</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Sexo</th>
+      <th>Edad</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Email</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @ejecutivos.each do |ejecutivo| %>
+     
+      <tr id="activos">
+        <td><%= image_tag (ejecutivo.user.avatar.url), size: '60x60' %></td>
+        <td><%= ejecutivo.nombre %></td>
+        <td><%= ejecutivo.apellido %></td>
+        <td><%= ejecutivo.sexo %></td>
+        <td><%= ejecutivo.edad %></td>
+        <td><%= ejecutivo.direccion %></td>
+        <td><%= ejecutivo.telefono %></td>
+        <td><%= ejecutivo.email %></td>
+        <td><%= link_to 'Mostrar', '#' %></td>
+        <td><%= link_to 'Editar', '#' %></td>
+        <td><%= link_to 'Eliminar', '#' %></td>
+      </tr> 
+     
+    <% end %> 
+    </tbody>
+  </table>
+  </div>
+<!--<%= link_to 'Nuevo Rol', new_role_path %>-->
+</div>
+<div class="text-center">
+<br>
+      <button type="button" class="btn btn-info " data-toggle="modal" data-target="#execreg">Registrar</button>
+<br>
+  <div class="modal fade" id="execreg" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><%= @enterprise.nom_enterprise %></h4>
+        </div>
+        <div class="modal-body">
+          <%= render 'enterprises/form_executive_registration' %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
